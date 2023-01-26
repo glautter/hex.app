@@ -1,0 +1,45 @@
+<div class="testbox">
+    <form [formGroup]="useForm" (ngSubmit)="onSubmit()">
+        <div class="banner">
+            <img src="./assets/img/logoHexagon.png">
+        </div>
+        <br />
+        <legend>Cadastrar Pessoa</legend>
+        <input formControlName="id" type="hidden"/>
+        <div class="colums">
+            <div class="item">
+                <label>Nome<span>*</span></label>
+                <input formControlName="nome" type="text"/>
+            </div>
+            <div class="item">
+                <label>Cpf<span>*</span></label>
+                <input formControlName="cpf" type="text"/>
+            </div>
+            <div class="item">
+                <label>Idade<span>*</span></label>
+                <input formControlName="idade" type="text"/>
+            </div>
+            <div class="item">
+                <label>Estadocivil<span>*</span></label>
+                <select ng-model="selectedValue" formControlName="estadoCivil">
+                    <option value="">Selecione</option>
+                    <option value="0">Solteiro</option>
+                    <option value="1">Casado</option>
+                    <option value="2">Divorciado</option>
+                    <option value="3">Viúvo</option>
+                </select>
+            </div>
+            <div class="item">
+                <label>Cidade<span>*</span></label>
+                <input formControlName="cidade" type="text"/>
+            </div>
+            <div class="item">
+                <label>Estado<span>*</span></label>
+                <input formControlName="estado" type="text"/>
+            </div>
+        </div>
+        <div class="btn-block">
+            <button type="submit">Salvar</button>
+            </div>
+    </form>
+</div>

@@ -1,0 +1,41 @@
+<body>
+    <nav class="container-fluid">
+        <div class="navbar-header">
+            <img src="./assets/img/logoHexagon.png">
+        </div>
+    </nav>
+    <span id="titulo">
+        <h2>Dados de Pessoa</h2>
+    </span>
+    <div>
+        <a href="">Incluir</a>
+    </div>
+    <div>
+        <table id="customers">
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Estado Civil</th>
+                <th>CPF</th>
+                <th>Cidade</th>
+                <th>Estado</th>
+                <th></th>
+            </tr>
+            <tr *ngFor="let pessoa of pessoas"
+             (click)="getPessoaById(pessoa.id)"
+             >
+                <td>{{pessoa.nome}}</td>
+                <td>{{pessoa.idade}}</td>
+                <td>{{pessoa.estadoCivil}}</td>
+                <td>{{pessoa.cpf}}</td>
+                <td>{{pessoa.cidade}}</td>
+                <td>{{pessoa.estado}}</td>
+                <td>
+
+                    <a href="">Alterar</a> |
+                    <a href="">Excluir</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>

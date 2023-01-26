@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
+import { PessoaService } from './pessoa-form/pessoa.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'apphexagon';
+  title = 'Hexagon';
+  @Input() usePessoaFilho!: { id: number, nome: string, idade: number, cpf: string, estadoCivil: number, cidade: string, estado: string };
+  @Input() usePessoa!: { id: number, nome: string, idade: number, cpf: string, estadoCivil: number, cidade: string, estado: string };
+
+  constructor(private pessoaService: PessoaService) {}
 }
